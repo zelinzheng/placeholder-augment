@@ -19,12 +19,14 @@
 			//Create input wrapper with label for placeholder. Also sets the for attribute to the id of the input if it exists.
 			var $wrapper = $('<span class="placeholderWrap"><label for="' + id + '">' + $this.attr('placeholder') + '</label></span>');
 			
-			//Disables default placeholder
-			$this.attr('placeholder', '').keyup();
-			
 			//Adds an id to elements if absent
 			this.id = id; 
 			$wrapper.insertAfter($this).append($this);
+			
+			//Disables default placeholder
+			$this.attr('placeholder', '').keyup();
+			
+			
 		});
 	};
 	
